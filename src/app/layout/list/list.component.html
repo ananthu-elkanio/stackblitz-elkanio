@@ -1,0 +1,12 @@
+<button>Add User</button>
+<ul>
+  <li *ngFor="let user of userList">
+    <div class="d-flex">
+      <img width="35" [src]="user.avatar">
+      <div><b>{{ user.first_name }}</b><br> {{ user.email }}</div>
+    </div>
+     
+  </li>
+</ul>
+<div *ngIf="isLoading">Loading...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
